@@ -1,0 +1,100 @@
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+int main() {
+    string customerName = "Shervin Aghaie";
+    string accountNumber = "6037-1234-5678";
+    double balance = 25000000;
+    int choice;
+
+    cout << "\n";
+    cout << "================================================\n";
+    cout << "           SHERVIN BANKING SYSTEM\n";
+    cout << "================================================\n";
+    cout << " Welcome to Shervin Bank Online Services!\n";
+    cout << "------------------------------------------------\n";
+    cout << " Customer Name : " << customerName << endl;
+    cout << " Account Number: " << accountNumber << endl;
+    cout << fixed << setprecision(0);
+    cout << " Available Balance: " << balance << " Rials\n";
+    cout << "================================================\n";
+
+    do {
+        cout << "\n";
+        cout << "                 MAIN MENU\n";
+        cout << "------------------------------------------------\n";
+        cout << " 1. Money Transfer\n";
+        cout << " 2. Buy Mobile Charge\n";
+        cout << " 3. Account Report\n";
+        cout << " 4. Check Account Balance\n";
+        cout << " 5. Customer Information\n";
+        cout << " 6. About Shervin Bank\n";
+        cout << " 0. Exit\n";
+        cout << "------------------------------------------------\n";
+        cout << " Please select a service: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "\n[ MONEY TRANSFER SERVICE ]\n";
+                cout << "Transfer request received.\n";
+                cout << "Transaction status: SUCCESSFUL\n";
+                cout << "This is a demonstration only.\n";
+                break;
+
+            case 2:
+                cout << "\n[ MOBILE CHARGE SERVICE ]\n";
+                cout << "Mobile charge request received.\n";
+                cout << "Purchase status: SUCCESSFUL\n";
+                cout << "This is a demonstration only.\n";
+                break;
+
+            case 3:
+                cout << "\n[ ACCOUNT REPORT ]\n";
+                cout << "Customer: " << customerName << endl;
+                cout << "Account: " << accountNumber << endl;
+                cout << "Balance: " << balance << " Rials\n";
+                cout << "Report generated successfully.\n";
+                break;
+
+            case 4:
+                cout << "\n[ ACCOUNT BALANCE ]\n";
+                cout << "Your current balance is: "
+                     << balance << " Rials\n";
+                break;
+
+            case 5:
+                cout << "\n[ CUSTOMER INFORMATION ]\n";
+                cout << "Name: " << customerName << endl;
+                cout << "Account: " << accountNumber << endl;
+                cout << "Account type: Personal\n";
+                cout << "Status: Active (Demo)\n";
+                break;
+
+            case 6:
+                cout << "\n[ ABOUT SHERVIN BANK ]\n";
+                cout << "A sample banking management system.\n";
+                cout << "Created for a university programming activity.\n";
+                cout << "Technology: C++\n";
+                break;
+
+            case 0:
+                cout << "\nThank you for using Shervin Bank!\n";
+                cout << "Goodbye!\n";
+                break;
+
+            default:
+                cout << "\nInvalid option. Please try again.\n";
+        }
+
+    } while (choice != 0);
+
+    cout << "\n================================================\n";
+    cout << "        SHERVIN BANK - END OF SESSION\n";
+    cout << "================================================\n";
+
+    return 0;
+}
